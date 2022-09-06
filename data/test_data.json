@@ -1,0 +1,29 @@
+{
+    "test_win_check":[
+        {
+            "player_x_pos": "0b100100100",
+            "player_o_pos": "0b010001000",
+            "winer":1
+        },
+        {
+            "player_x_pos": "0b00100100",
+            "player_o_pos": "111000000",
+            "winer":2
+        },
+        {
+            "player_x_pos": "0b000000000",
+            "player_o_pos": "0b000000111",
+            "winer":2
+        },
+        {
+            "player_x_pos": "0b000111000",
+            "player_o_pos": "0b100000010",
+            "winer":1
+        },
+        {
+            "player_x_pos": "0b000100010",
+            "player_o_pos": "0b101000100",
+            "winer":0
+        }
+    ]
+}

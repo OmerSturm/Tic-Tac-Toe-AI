@@ -3,8 +3,8 @@ from functions import print_board
 from functions import take_move
 
 
-def main() -> None:
 
+def main() -> None:
     data_board = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     visual_board = [['1', ' ', ' ', ' ', ' ', '|', '2', ' ', ' ', ' ', ' ', '|', '3', ' ', ' ', ' ', ' '],
                 [' ', ' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' ', ' '],
@@ -20,6 +20,7 @@ def main() -> None:
     player = 1 # X's
     move = int(input("Move: "))
     take_move(data_board, player, move)
+    
     '''Loop this... Include above as well
     # Update visual Board
     # Switch players and take next move

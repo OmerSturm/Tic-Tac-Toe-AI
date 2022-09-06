@@ -2,7 +2,7 @@
 
 import unittest
 import functions as f
-
+import json
 
 class FunctionTesting(unittest.TestCase):
     
@@ -16,9 +16,17 @@ class FunctionTesting(unittest.TestCase):
         visual = ['X', 'X', 'O', '_', 'O', '_', '_', '_', '_']
         self.assertEqual(f.update(data), visual)
 
-    # def test_win_check(self):
-    #     x_win = [1, 1, 1, 0, 2, 0, 0, 0, 2]
-    #     self.assertEqual(f.win_check(x_win), 1)
+    def test_win_check(self):
+        with open(r"Tic-Tac-Toe-AI/data/test_data.json") as json_file:
+            data = json.load(json_file)
+        for situation in data['test_win_check']:
+            player_o_pos = int(situation['player_o_pos'],2)
+            player_x_pos = int(situation['player_x_pos'],2)
+            self.assertTrue(f.win_check(player_o_pos =player_o_pos,player_x_pos=player_x_pos) == situation['winer'])
 
-if __name__ == '__main__':
+if __name__ == '__main__':  
     unittest.main()
+
+FunctionTesting.test_win_check()
+
+
